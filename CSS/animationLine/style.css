@@ -1,1 +1,21 @@
-1
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    background-color: black;
+}
+path{
+    stroke: green;
+    stroke-width: 10;
+    stroke-dasharray: 6488;
+    stroke-dashoffset: 6488;
+    animation: draw 15s linear forwards;
+}
+
+@keyframes draw {
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
