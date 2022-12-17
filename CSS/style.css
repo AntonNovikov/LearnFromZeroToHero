@@ -1,0 +1,15 @@
+/* https://www.youtube.com/shorts/mLo8s-pu4gs */
+
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+body{
+  font-family: "Nabla", cursive;
+  text-align: center;
+  font-size: 10vw;
+  font-palette: --Color;
+  
+}
+
+@font-palette-values --Color{
+  font-family:  "Nabla";
+  base-palette: 1; /* 1-6 */
+}
