@@ -4,7 +4,7 @@
 from gtts import *
 from playsound import playsound
 
-text_val = "Welcome to the hell"
+text_val = "Welcome to the New World"
 language = "en"
 
 
