@@ -1,4 +1,4 @@
-// map filter reject reduce join reverse
+// map filter reject reduce join reverse find
 let array = []
 let string = "abc"
 let res;
