@@ -1,3 +1,4 @@
+// map filter reject reduce join reverse
 let array = []
 let string = "abc"
 let res;
