@@ -12,3 +12,7 @@ const calculateCircleArea = function (radius) {
 const calculateCircleArea = (radius) => {
   return MathMath.PI * radius ** 2;
 };
+
+// В стрелочных функциях нет собственного объекта arguments.
+
+// при помощи стрелочных функций функции-конструкторы не создаются.
