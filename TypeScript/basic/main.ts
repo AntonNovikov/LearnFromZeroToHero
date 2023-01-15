@@ -29,6 +29,7 @@ function addOne(num: NumberOrString):number {
     return 1 + Number(num)
 }
 
+// 16+9
 
 interface User{
     name:string
