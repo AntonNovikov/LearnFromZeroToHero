@@ -65,3 +65,6 @@ console.log(str.toString());
 
 // valueOf();
 
+// repeat
+
+// concat 

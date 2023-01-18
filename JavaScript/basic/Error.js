@@ -21,9 +21,12 @@
 // }
 
 
-const main = async() => {
-    await new Promise((res,rej) => {
-        rej("errrrrrr");
-    }).then(null,(error)=>{console.log(error.toString())})
-}
-main()
+// const main = async() => {
+//     await new Promise((res,rej) => {
+//         rej("errrrrrr");
+//     }).then(null,(error)=>{console.log(error.toString())})
+// }
+// main()
+
+
+// CustomError extends Error

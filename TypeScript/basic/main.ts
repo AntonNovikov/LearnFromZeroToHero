@@ -38,7 +38,7 @@ interface User{
     
 }
 
-const personONe: User = {
+const personONe1: User = {
     name:"Tony",
     age:34,
     hobbies:['sleep','nothingdo'],
