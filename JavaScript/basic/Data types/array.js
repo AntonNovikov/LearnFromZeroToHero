@@ -1,6 +1,24 @@
+// https://tproger.ru/translations/javascript-arrays-best-practices/
+
 // var fs = require("fs")
 import fs from "fs";
-// map filter reject reduce join reverse find
+// map 
+// filter 
+// reject 
+// reduce 
+// join 
+// reverse 
+// find
+const myAr = [
+  { id:1, name: "john"},
+  { id:2, name: "2john"},
+  { id:3, name: "4john"},
+]
+
+console.log(myAr.find(el => el.id ===3))
+console.log(myAr.find(el => el.id ===7))
+
+
 // some
 // flat
 // concat

@@ -68,3 +68,5 @@ console.log(str.toString());
 // repeat
 
 // concat 
+
+// Метод charAt возвращает символ по указанному индексу. 

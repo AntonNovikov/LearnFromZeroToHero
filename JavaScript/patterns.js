@@ -1,0 +1,1 @@
+// https://stackblitz.com/@lydiahallie/collections/javascript-patterns

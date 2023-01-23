@@ -16,3 +16,13 @@ const calculateCircleArea = (radius) => {
 // В стрелочных функциях нет собственного объекта arguments.
 
 // при помощи стрелочных функций функции-конструкторы не создаются.
+
+
+// Самовызывающаяся функция (IIFE) - Immediately Invoked Function Expression
+// https://developer.mozilla.org/ru/docs/Glossary/IIFE
+(function () {
+  // statements
+  console.log("IIFE")
+})();
+
+
