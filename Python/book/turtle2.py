@@ -1,3 +1,6 @@
+# https://docs.python.org/3/library/turtle.html#turtle.shape
+
+
 from turtle import *
 def circle():
     leftahed()
