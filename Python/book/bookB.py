@@ -10,8 +10,14 @@
 
 # 19
 
+if(1%2): # True or False
+    print("true 1")
+# for counter in range(10):
 for counter in range(2,12,3):
-    if counter % 2 == 0 :
+    # if counter % 2 == 0 :
+    # if (counter % 2 == 0) :
+    # if (counter % 2) == 0 :
+    if ((counter % 2) == 0) :
         print(counter)
         print("even (четное)")  
         print("")  
@@ -19,3 +25,14 @@ for counter in range(2,12,3):
         print(counter)
         print("odd (нечетное))")
         print("")
+
+
+
+
+for counter in range(10):
+    if (counter % 2 == 0 ):
+        print(counter)
+        print("odd")
+    else:
+        print(counter)
+        print("even")    
