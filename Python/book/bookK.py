@@ -474,7 +474,8 @@ canvas.pack()
 bat = canvas.create_rectangle(0, 0, 40, 10, fill="dark turquoise")
 ball = canvas.create_oval(0, 0, 10, 10, fill="deep pink")
 windowOpen = True
-
+print(bat)
+print(ball)
 
 def main_loop():
     while windowOpen == True:
@@ -524,6 +525,7 @@ setBatBottom = canvasHeight-30
 
 def move_ball():
     # print("move ball")
+    global bat
     global ballMoveX, ballMoveY, score, bounceCount, batSpeed
     (ballLeft, ballTop, ballRight, ballBottom) = canvas.coords(ball)
     if ballMoveX > 0 and ballRight > canvasWidth:
@@ -535,18 +537,19 @@ def move_ball():
     if ballMoveY > 0 and ballBottom > setBatTop and ballBottom < setBatBottom:
         (batLeft, batTop, batRight, batBottom) = canvas.coords(bat)
         # if batRight > batLeft and ballLeft < batRight:
-        if (ballMoveX>0 and (ballRight+ballMoveX>batLeft and ballLeft < batRight)
-        or ballMoveX<0 and (ballRight>batLeft and ballRight+ballMoveX < batRight)):
+        if (ballMoveX > 0 and (ballRight+ballMoveX > batLeft and ballLeft < batRight)
+                or ballMoveX < 0 and (ballRight > batLeft and ballRight+ballMoveX < batRight)):
             ballMoveY = - ballMoveY
             score = score + 1
             bounceCount = bounceCount + 1
+            # canvas.itemconfig(bat,fill='green', width = 100) # как прибавиь размер 
             if bounceCount == 1:
                 bounceCount = 0
                 batSpeed = batSpeed + 1
                 if ballMoveX > 0:
                     ballMoveX = ballMoveX + 1
                 else:
-                    ballMoveX = ballMoveX - 1 
+                    ballMoveX = ballMoveX - 1
                 ballMoveY = ballMoveY - 1
     canvas.move(ball, ballMoveX, ballMoveY)
 
@@ -555,8 +558,10 @@ def check_game_over():
     (ballLeft, ballTop, ballRight, ballBottom) = canvas.coords(ball)
     if ballTop > canvasHeight:
         print("Your score was" + str(score))
-        playAgain = tkinter.messagebox.askyesno(message="Do you want to play again?")
+        playAgain = tkinter.messagebox.askyesno(
+            message="Do you want to play again?") # something doesn't work
         if playAgain == True:
+        # if True:
             reset()
         else:
             close()
