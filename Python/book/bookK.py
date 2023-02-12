@@ -558,6 +558,7 @@ def check_game_over():
     (ballLeft, ballTop, ballRight, ballBottom) = canvas.coords(ball)
     if ballTop > canvasHeight:
         print("Your score was" + str(score))
+        # https://www.pythontutorial.net/tkinter/tkinter-askyesno/
         playAgain = tkinter.messagebox.askyesno(
             message="Do you want to play again?") # something doesn't work
         if playAgain == True:
