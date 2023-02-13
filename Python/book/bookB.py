@@ -10,29 +10,42 @@
 
 # 19
 
-if(1%2): # True or False
-    print("true 1")
-# for counter in range(10):
-for counter in range(2,12,3):
-    # if counter % 2 == 0 :
-    # if (counter % 2 == 0) :
-    # if (counter % 2) == 0 :
-    if ((counter % 2) == 0) :
-        print(counter)
-        print("even (четное)")  
-        print("")  
-    else:
-        print(counter)
-        print("odd (нечетное))")
-        print("")
+# if(1%2): # True or False
+#     print("true 1")
+# # for counter in range(10):
+# for counter in range(2,12,3): # MY
+#     # if counter % 2 == 0 :
+#     # if (counter % 2 == 0) :
+#     # if (counter % 2) == 0 :
+#     if ((counter % 2) == 0) :
+#         print(counter)
+#         print("even (четное)")  
+#         print("")  
+#     else:
+#         print(counter)
+#         print("odd (нечетное))")
+#         print("")
 
 
+# 22 
 
+#
+# name = " ино аоо"
+# greeting = "hello, "
+# message = name + greeting
+# print(message)
+# a = 10
+# b = 4
+# print(a<b) # false это 
+# age = 10
+# if age == 10:
+#     print('Hello world')
+# страница 29
 
-for counter in range(10):
-    if (counter % 2 == 0 ):
-        print(counter)
-        print("odd")
-    else:
-        print(counter)
-        print("even")    
+# == равно
+# != не равно
+# < меньше, чем
+# > больше, чем
+is_dark = input('На улице темно? yes / no )')
+if is_dark == 'yes':
+    print('Спокойной ночи! Хр-р-р-р-р-р.. . ')
