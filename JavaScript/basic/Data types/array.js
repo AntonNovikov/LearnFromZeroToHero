@@ -2,22 +2,22 @@
 
 // var fs = require("fs")
 import fs from "fs";
-// map 
-// filter 
-// reject 
-// reduce 
-// join 
-// reverse 
+// map
+// filter
+// reject
+// reduce
+// join
+// reverse
 // find
+// at
 const myAr = [
-  { id:1, name: "john"},
-  { id:2, name: "2john"},
-  { id:3, name: "4john"},
-]
+  { id: 1, name: "john" },
+  { id: 2, name: "2john" },
+  { id: 3, name: "4john" },
+];
 
-console.log(myAr.find(el => el.id ===3))
-console.log(myAr.find(el => el.id ===7))
-
+console.log(myAr.find((el) => el.id === 3));
+console.log(myAr.find((el) => el.id === 7));
 
 // some
 // flat
@@ -45,23 +45,25 @@ console.log(res);
 
 // https://www.youtube.com/watch?v=1DMolJ2FrNY&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84&index=4
 // var output = fs.readFileSync('data.txt') // Buffer
-var output = fs
-  .readFileSync("data.txt", "utf8")
-  .trim()
-  .split("\n")
-  .map((line) => line.split("\t"))
-  .reduce((customers, line) => {
-    // console.log(line)
-    customers[line[0]] = customers[line[0]] || [];
-    customers[line[0]].push({
-      name: line[1],
-      price: line[2],
-      quantity: line[3],
-    });
-    return customers;
-  }, {});
+
+// var output = fs
+//   .readFileSync("data.txt", "utf8")
+//   .trim()
+//   .split("\n")
+//   .map((line) => line.split("\t"))
+//   .reduce((customers, line) => {
+//     // console.log(line)
+//     customers[line[0]] = customers[line[0]] || [];
+//     customers[line[0]].push({
+//       name: line[1],
+//       price: line[2],
+//       quantity: line[3],
+//     });
+//     return customers;
+//   }, {});
+
 // console.log("output :",output)
-console.log("output :", JSON.stringify(output, null, 2));
+// console.log("output :", JSON.stringify(output, null, 2));
 
 // some   false при любом условии для пустого массива.
 const arraySome = [1, 2, 3, 4, 5];
@@ -123,3 +125,7 @@ console.log(arrSl.join(", "));
 // });
 
 // console.log(form.format(arrSp));
+
+// at()
+const arraySim = ["dfd", "dsfdlf", "dsfdljdfs"];
+console.log(arraySim.at(-2));
