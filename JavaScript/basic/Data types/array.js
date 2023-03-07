@@ -129,3 +129,10 @@ console.log(arrSl.join(", "));
 // at()
 const arraySim = ["dfd", "dsfdlf", "dsfdljdfs"];
 console.log(arraySim.at(-2));
+
+
+// length
+
+// push
+
+// sort The sort() method sorts the elements of an array in place and returns the array. The sort is not necessarily stable. The default sort order is according to string Unicode code points.

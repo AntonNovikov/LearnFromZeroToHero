@@ -25,7 +25,7 @@ var str = ' символ \\ ';
 // includes, startsWith, endsWith
 
 
-// substring, substrи slice.
+// substring, substr slice.
 
 // .codePointAt(pos)
 
@@ -45,7 +45,7 @@ console.log(str.toString());
 
 // match
 
-// replace
+// replace  methods returns a new string after modifying the existing string
 
 
 // search
@@ -70,3 +70,5 @@ console.log(str.toString());
 // concat 
 
 // Метод charAt возвращает символ по указанному индексу. 
+
+// raw

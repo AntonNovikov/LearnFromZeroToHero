@@ -1,0 +1,3 @@
+var pElement = document.querySelectoraAll("div p")
+DEFINITION
+find all p tags inside div
