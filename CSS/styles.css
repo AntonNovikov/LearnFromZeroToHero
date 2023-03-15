@@ -1,0 +1,81 @@
+/* https://code-basics.com/ru/languages/css */
+
+* {
+  font-variant: normal;
+  font-variant: small-caps;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+  text-decoration: underline;
+  text-decoration: line-through;
+}
+
+.line-height {
+  line-height: 36;
+}
+
+.verdana-text {
+  font-family: Verdana, Futura, sans-serif;
+}
+
+.font {
+  font: italic small-caps bold 24px/1.2 Arial;
+
+  font-style: italic;
+  font-variant: oblique;
+  font-weight: 400;
+  font-size: small;
+
+  line-height: 0px;
+  /* (эти два правила записываются через слэш) */
+  font-family: "Courier New", Courier, monospace;
+}
+
+.border {
+  border-width: 1px;
+  border-style: solid;
+  /* dotted
+dashed
+solid
+double
+groove
+ridge
+inset
+outset */
+  border-color: #ccc;
+  border: 1px solid #ccc;
+}
+
+
+.padding {
+  padding: top right bottom left;
+}
+.margin {
+  margin: top right bottom left;
+}
+.rectanle{
+    width: 300px;
+    height: 100px;
+    background-color: #000;
+}
+
+.box-sizing{
+    box-sizing:border-box;
+}
+
+.card-hell{
+    background-color: #fa7268;
+    color: #fff;
+    width: 230px;
+    height: 25px;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid #9c27b0;
+    font-size: 20px;
+}
+/*
+<style>
+
+</style>
+*/
