@@ -2,6 +2,7 @@
 
 
 from turtle import *
+print(circle)
 def circle():
     leftahed()
     leftahed()
