@@ -32,8 +32,8 @@ var str = ' символ \\ ';
 
 // fromCodePoint 
 
-let strAn = 'lorem ipsum'.anchor('Закладка');
-console.log(str.toString());
+// let strAn = 'lorem ipsum'.anchor('Закладка');
+// console.log(str.toString());
 
 
 // fromCharCode
@@ -67,8 +67,44 @@ console.log(str.toString());
 
 // repeat
 
-// concat 
+
+
+console.log(
+    "JavaScript ".repeat(5))
+
+// concat
+console.log(
+    "Java".concat("Script"))
 
 // Метод charAt возвращает символ по указанному индексу. 
 
 // raw
+
+// at
+console.log(
+"JavaScript".at(1))
+console.log(
+"JavaScript".at(-2))
+
+//
+console.log(
+"JavaScript".padStart(15,"-"))
+
+//
+console.log(
+    "JavaScript".padEnd(15,"-"))
+
+// trim()
+
+console.log(
+    "   Java Script ".trim(15,"-"))
+
+// chartCodeAt
+console.log(
+    "   Java Script ".charCodeAt(6))
+console.log(
+    "Java Script ".charCodeAt(1))
+
+// slice
+console.log(
+    "Java Script ".slice(1,4))
