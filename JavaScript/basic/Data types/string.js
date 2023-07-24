@@ -1,3 +1,5 @@
+console.log("typeof = ",typeof "typeof = string")
+// '' "" ``
 var str = "I'm a JavaScript \"programmer\" ";
 // alert( str ); // I'm a JavaScript "programmer"
 var str = ' символ \\ ';

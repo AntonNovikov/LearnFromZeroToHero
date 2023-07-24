@@ -1,3 +1,5 @@
+// объект массив функция ошибка
+
 // https://www.youtube.com/shorts/4PZeIwXx1hc
 const USER_MAP = {
   1: { name: "Kyle" },

@@ -12,3 +12,7 @@
 
 // confirm("Message Text Here"); // true or false
 // var answerVar = confirm("Message Text Here");
+
+
+// function name ( empty or ?parameters ) { empty statement return}
+// name (empty ?argumetns)

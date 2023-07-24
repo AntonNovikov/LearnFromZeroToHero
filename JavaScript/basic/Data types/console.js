@@ -1,5 +1,7 @@
 // https://techrocks.ru/2021/10/01/7-console-log-tips/
 // https://developer.mozilla.org/en-US/docs/Web/API/console
+let varib = 4;
+console.log({varib})
 
 // Стилизация
 console.log(
