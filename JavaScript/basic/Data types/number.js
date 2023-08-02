@@ -2,3 +2,7 @@
 
 console.log(typeof 4)
 console.log(typeof NaN)
+
+// foFixed
+
+// local///

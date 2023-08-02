@@ -1,3 +1,0 @@
-// createElement()
-
-// write  - override html
