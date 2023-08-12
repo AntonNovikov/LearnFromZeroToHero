@@ -94,7 +94,24 @@ const dev1 = {
 const dev2 = { ...dev1 };
 console.log(dev1);
 console.log(dev2);
-dev2.skills[0] = "Sleping on the work"; // изменить и в первом 
+dev2.skills[0] = "Sleping on the work"; // изменить и в первом
 dev2.fullName = "Sleping on the work is my Name";
 console.log(dev1);
 console.log(dev2);
+
+/* assign() */
+let person = {
+  name: "Anton",
+  age: 35,
+  skills: ["CSS", "HTML", "JS"],
+};
+
+let newPerson = Object.assign({}, person);
+newPerson.name = "Viktor";
+console.log(person.name);
+console.log(newPerson.name);
+console.log(person.skills);
+console.log(newPerson.skills);
+newPerson.skills = "Отсутствуют";
+console.log(person.skills);
+console.log(newPerson.skills);

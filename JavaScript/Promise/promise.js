@@ -16,26 +16,51 @@
 // console.log(promise1);
 // // Expected output: [object Promise]
 
-function withPromise() {
-  return new Promise((res, rej) => {
-    res("hello from promise");
-  });
+// function withPromise() {
+//   return new Promise((res, rej) => {
+//     res("hello from promise");
+//   });
+// }
+
+// console.log("I thought I'm last but now I'm second");
+// withPromise()
+//   .then(console.log)
+//   .catch((value) => console.log(value + "!!!!"));
+// setTimeout(() => console.log("I have to be second, but i'm third"), 0);
+// console.log("I'm first");
+
+// async function getUsers() {
+//   //   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+//   //   const data = await response.json();
+//   //   return data
+
+//   //   return Promise.resolve([{ id: 1, src: "" }]);
+//   return Promise.reject("Invalid user");
+// } // возращает Promise
+
+// getUsers().then().catch();
+
+///____________
+async function getPosts() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data = await response.json();
+  return data;
+}
+async function getUsers() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/users");
+  const data = await response.json();
+  return data;
+}
+async function getComments() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/comments");
+  const data = await response.json();
+  return data;
 }
 
-console.log("I thought I'm last but now I'm second");
-withPromise()
-  .then(console.log)
-  .catch((value) => console.log(value + "!!!!"));
-setTimeout(() => console.log("I have to be second, but i'm third"), 0);
-console.log("I'm first");
-
-async function getUsers() {
-  //   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-  //   const data = await response.json();
-  //   return data
-
-  //   return Promise.resolve([{ id: 1, src: "" }]);
-  return Promise.reject("Invalid user");
-} // возращает Promise
-
-getUsers().then().catch();
+Promise.all([getPosts(), getUsers(), getComments()])
+  .then((values) => {
+    console.log(values); //[[posts],[users],[comments]]
+    const [posts, users, comments] = values;
+    console.log(posts, users, comments);
+  })
+  .catch(console.error);

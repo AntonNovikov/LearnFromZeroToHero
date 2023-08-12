@@ -1,18 +1,40 @@
 // https://tproger.ru/translations/javascript-arrays-best-practices/
-
 // var fs = require("fs")
 import fs from "fs";
 
+const test2 = [];
+test2["1"] = 5;
+test2["Дрова"] = 5; //
+console.log(test2);
+test2.push("Один");
+console.log(test2);
+
+const names = ["Tony", "Victor", "Sergei"];
+// push
+8;
+// pop()
+const namePop = names.pop();
+console.log(namePop);
+console.log(names);
+// shift
+const nameShift = names.shift();
+console.log(nameShift);
+console.log(names);
+// unshift
+const namesLength2 = names.unshift("Нюра");
+console.log(namesLength2);
+console.log(names);
 // mutable
 
 // map
-// filter
+/* filter() */
 console.log("filter");
 const numbers = [1, 2, 3, 4, 5, 6];
 const oddNumbers = numbers.filter((el) => el % 2 == 1);
 console.log(oddNumbers);
 // reject
 // reduce
+console.log("_____________");
 console.log("reduce");
 
 // join
@@ -43,7 +65,11 @@ const myAr = [
 // flat
 // concat
 // splice
-// slice
+/* slice() */
+// console.log(names.splice(0, 2))
+// toSpliced()
+// console.log(names.toSpliced(0, 2))
+// console.log(names)
 // toString, join
 let array = [];
 let string = "abc";
@@ -58,8 +84,17 @@ res = array.join();
 // console.log(array);
 // console.log(res);
 
+/* reverse() // dont use it. it will mutate array */
+
+console.log("sort");
+console.log(numberForSort.reverse());
+console.log(numberForSort);
+console.log("___________");
+
 res = array.reverse();
 
+/*toReversed() */
+// const reversed = names.toReversed()
 // console.log(array);
 // console.log(res);
 
@@ -152,16 +187,8 @@ const arraySim = ["dfd", "dsfdlf", "dsfdljdfs"];
 
 // length
 
-// push
-
-// pop()
-
-// shift
-
-// unshift
-
-// sort The sort() method sorts the elements of an array in place and returns the array. The sort is not necessarily stable. The default sort order is according to string Unicode code points.
-// dont use it. it will mutate array
+/* sort The sort() method sorts the elements of an array in place and returns the array. The sort is not necessarily stable. The default sort order is according to string Unicode code points.
+// dont use it. it will mutate array*/
 console.log("sortNumbers");
 const numberForSort = [1, 2, 3, 4, 10, 12, 23];
 console.log(numberForSort);
@@ -184,9 +211,16 @@ console.log(fruits.sort());
 // }
 console.log(fruits);
 console.log("___________");
-// reverse
-// dont use it. it will mutate array
-console.log("sort");
-console.log(numberForSort.reverse());
-console.log(numberForSort);
-console.log("___________");
+
+/*toSorted()*/
+
+const people = [
+  { name: 'Антон', money: 4200 },
+  { name: 'Фурсия', money: 15100 },
+  { name: 'Денис', money: 300 },
+  { name: 'Кобра', money: 7520 },
+]
+// console.log(people.indexOf({ name: 'Ксения', budget: 7520 }))
+
+/*find() */
+// const finded = people.find((p) => p.budget === 7520)

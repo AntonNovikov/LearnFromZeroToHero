@@ -1,3 +1,4 @@
+const name = 'Anton' // string
 console.log("typeof = ", typeof "typeof = string");
 // '' "" ``
 var str = 'I\'m a JavaScript "programmer" ';
