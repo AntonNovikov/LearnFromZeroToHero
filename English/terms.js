@@ -7,4 +7,5 @@ const terms = [
   },
   { id: 2, engWrite: "<>", engSlang: "angle brackets", source: "SoloLearn" },
   { id: 3, engWrite: "Html element with both opening and closing tags", engSlang: "Tags here calls container tags (opposite empty tag)", source: "SoloLearn" },
+  { id: 4, engWrite: "Indentation", engSlang: "The spaces at the beginning of lines", source: "SoloLearn" },
 ];
