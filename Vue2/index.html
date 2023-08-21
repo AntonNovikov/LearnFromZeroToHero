@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <div id="vue" >
+        <h3>{{textSearch}}</h3>
+        <input type="text" size="20" v-model="textSearch">
+        <button type="button" @click="getHashtags">doWn</button>
+        <ul>
+            <li v-for="hashtag in hashtags">{{hashtag}}</li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var app = new Vue({
+        el: "#vue",
+        data: {
+            hashtags: [],
+            cities: [],
+            textSearch: '',
+            url:{
+                hashtags:"http://api.newtony.ru/api/?type=hashtag",
+                cities:"http://api.newtony.ru/api/?type=city",
+
+            }
+        },
+        watch: {
+            textSearch: function (){
+                if(this.textSearch.length> 3){
+                    this.textSearch = "veyzdsljfd ldsjfdf"
+                }
+            }
+        },
+        methods: {
+            getHashtags(){
+                axios.get(this.url.hashtags).then((response) => {
+                    console.log(response)
+                    console.log(response.data)
+                    this.hashtags = response.data;
+                })
+            }
+        },
+      });
+    </script>
+  </body>
+</html>
