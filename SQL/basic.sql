@@ -39,3 +39,40 @@ TRUNCATE TABLE coins;
 -- Операция DELETE блокирует каждую строку, а TRUNCATE — всю таблицу. Операция TRUNCATE не возвращает какого-то осмысленного значения (обычно возвращает 0) в отличие от DELETE, которая возвращает число удаленных строк.
 -- DELETE
 DELETE FROM coins
+
+
+
+--LIKE
+-- % any amount of symbols
+-- _ any one symbol
+
+
+
+SELECT LOWER(title)
+FROM movies;
+
+
+SELECT UPPER(title)
+FROM movies;
+
+
+-- <
+-- >
+-- =
+-- <>
+-- <=
+-- >=
+
+
+--MAX
+--MIN
+--COUNT
+--SUM
+-- AVG
+
+--GROUP BY
+
+
+-- DISTINCT
+
+-- IS NULL
