@@ -18,8 +18,10 @@
       <h2>Event Practice</h2>
       <button @click="showAlert">Show Alert</button>
       <hr>
-      <input type="text">
-      <p>OUTPUT</p>
+      <input type="text" @keydown="saveInput">
+      <p>{{userInput}}</p>
+      <input type="text" @keydown="saveInput" @keyup.enter="confirmInput">
+      <p>{{confirmedInput}}</p>
     </section>
   </body>
 </html>

@@ -2,7 +2,7 @@ const app = Vue.createApp({
   data() {
     return {
       counter: 10,
-      name : '',
+      name : 'df',
       confirmedName:'',
     };
   },
@@ -23,6 +23,9 @@ alert("submit")
     reduce() {
       this.counter = this.counter - 1;
       // this.counter--;
+    },
+    resetInput(){
+this.name = '';
     }
   }
 });
