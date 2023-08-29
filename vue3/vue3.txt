@@ -1,1 +1,20 @@
 v-html
+
+v-on: === @
+v-bind:   ===  :
+
+v-if
+v-else
+
+v-show  (display:none)
+
+v-for
+"(X, index) in xS"
+:key="x"
+@click="function(index)"
+
+
+@click.stop
+
+
+!use v-for and v-if . use a wrapper with v-if instead
