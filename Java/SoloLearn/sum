@@ -3,6 +3,7 @@ import  java.util.Scanner;
 public class Program {
     public static void main(String[] args) {
         //ваш код
+        System.out.println("helllo")
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int sum = 0;
