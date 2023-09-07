@@ -76,3 +76,18 @@ FROM movies;
 -- DISTINCT
 
 -- IS NULL
+
+-- UNION must have the same number of columns. The columns must also have the same data types. Also, the columns in each SELECT statement must be in the same order.
+-- UNION removes the duplicate records.
+
+-- SELECT firstname, lastname, age FROM Customers
+-- UNION
+-- SELECT firstname, lastname, age FROM Contacts
+
+-- UNION ALL is similar to UNION, but does not remove the duplicates:
+
+-- SELECT firstname, lastname, age FROM Customers
+-- UNION ALL
+-- SELECT firstname, lastname, age FROM Contacts
+
+-- SELECT name, year FROM Books WHERE year > 1900 UNION SELECT name , 2022 as year FROM new ORDER BY name ASC
