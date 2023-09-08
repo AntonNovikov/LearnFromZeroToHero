@@ -32,3 +32,9 @@ function reverseInteger(x) {
 console.log(reverseInteger(123)); // Output: 321
 console.log(reverseInteger(-123)); // Output: -321
 console.log(reverseInteger(120)); // Output: 21
+
+// let out = 0;
+//   while (x != 0) {
+//     out = out * 10 + x % 10; // append last digit of x
+//     x = x / 10; // remove last digit
+//   }
