@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12"
+  }
+  
+}

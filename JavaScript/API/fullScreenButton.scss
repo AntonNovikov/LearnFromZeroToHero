@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #333;
+  }
+  .btn {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 72px;
+    line-height: 72px;
+    padding: 10px 20px;
+    color: #ccc;
+    background: #666;
+    text-shadow: -1px -1px #333;
+    
+    &:hover {
+      background: #999;
+    }
+  }

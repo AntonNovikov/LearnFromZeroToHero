@@ -1,0 +1,1 @@
+// https://proglib.io/p/uchebnik-po-javascript-oop-na-prostyh-primerah-2022-06-26

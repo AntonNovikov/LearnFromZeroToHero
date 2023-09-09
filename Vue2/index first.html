@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div>
+      <div id="vue" :title='message' >
+        {{ message }}
+
+        <h1 v-if="status == 1">True status 1</h1>
+        <h1 v-else-if="status == 2">True status 2</h1>
+        <h1 v-else=>False status status {{status}} </h1>
+        <h1 v-show="status">ddfd</h1>
+        <h1 class="simple list" v-bind:class="{ active: isActive, 'in-line': isBtn}">fgf</h1>
+        <h1 class="simple list" v-bind:class="[ isActive ? 'active anotherclass' : 'disabled' , '']">Conditional (ternary) operator </h1>
+        <p :style="{ color: 'red' , width: width + 'px' }">Style</p>
+      </div>
+      
+    </div>
+    <script type="text/javascript">
+      var app = new Vue({
+        el: "#vue",
+        data: {
+          message: "Hello from You",
+          status: 0,
+          isActive: true,
+          isBtn: true,
+          width: 80
+        },
+      });
+    </script>
+  </body>
+</html>
