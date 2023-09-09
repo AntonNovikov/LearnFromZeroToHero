@@ -224,3 +224,4 @@ const people = [
 
 /*find() */
 // const finded = people.find((p) => p.budget === 7520)
+// TODO more
