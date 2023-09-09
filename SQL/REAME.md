@@ -1,0 +1,1 @@
+mysqli_set_charset($mysqli, "utf8");

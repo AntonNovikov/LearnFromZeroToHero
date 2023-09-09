@@ -91,3 +91,29 @@ FROM movies;
 -- SELECT firstname, lastname, age FROM Contacts
 
 -- SELECT name, year FROM Books WHERE year > 1900 UNION SELECT name , 2022 as year FROM new ORDER BY name ASC
+
+
+
+-- FOREIGN KEY (inner_id) REFERENCES another(outer_id) обеспечивает связь между таблицами 
+-- "this table" и "another" и гарантирует целостность данных при выполнении операций добавления и обновления.
+
+CREATE TABLE item_from_chegues (
+  id INT PRIMARY KEY,
+  chegue_id INT,
+  item_id INT,
+  FOREIGN KEY (chegue_id) REFERENCES chegues(id),
+  FOREIGN KEY (item_id) REFERENCES items(id)
+);
+
+
+SELECT ic.id, ic.chegue_id, i.name
+FROM item_from_chegues ic
+JOIN items i ON ic.item_id = i.id;
+
+
+
+-- Создать таблицу на основе выборки из другой
+CREATE TABLE newTable AS
+SELECT *
+FROM `oldTable`
+WHERE code = 112;
