@@ -48,7 +48,7 @@
       </section>
       <section id="log" class="container">
         <h2>Battle Log</h2>
-        <ul>
+        <ul class="scroll">
           <li v-for="logMessage in logMessages">
             <span :class="{'log--player' : logMessage.actionBy === 'player', 'log--monster'  : logMessage.actionBy === 'monster'}">
               {{logMessage.actionBy === 'player' ? "Player" : "Monster"}}

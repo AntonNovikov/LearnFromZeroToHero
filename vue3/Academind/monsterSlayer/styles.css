@@ -117,3 +117,8 @@ button:disabled {
 .log--heal {
   color: green;
 }
+
+.scroll{
+  height: 200px;
+  overflow-y: scroll;
+}
