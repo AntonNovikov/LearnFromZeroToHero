@@ -1,9 +1,18 @@
 <template>
   <section>
-    <header><h1>My Friends</h1></header> 
+    <header>
+      <h1>My Friends</h1>
+    </header>
+    
     <ul>
-    <friend-contact></friend-contact>
-    <friend-contact></friend-contact>
+      <!-- phoneNumber= '92347123' -->
+      <friend-contact v-for="friend in friends" :key="friend.id" :id="friend.id" :name='friend.name'
+        :phone-number='friend.phone' :email-address='friend.email' v-bind:is-favorite="friend.isFavorite"
+        @toggle-favorite="toggleFavoriteStatus"></friend-contact>
+      <!-- <friend-contact
+    name= 'Manuel   222 2Lorenz'
+          phone-number= '92347123'
+          email-address= ''  :is-favorite="false">></friend-contact> -->
     </ul>
   </section>
 </template>
@@ -19,16 +28,24 @@ export default {
           id: 'manuel',
           name: 'Manuel Lorenz',
           phone: '92347123',
-          email: 'emael@laodc.eho'
+          email: 'emael@laodc.eho',
+          isFavorite: false,
         },
         {
           id: 'm22anuel',
           name: 'Man2uel Lorenz',
           phone: '9222347123',
-          email: 'ema2el@laodc.eho'
+          email: 'ema2el@ladfdffdfdfodc.eho',
+          isFavorite: false,
         }
       ]
     }
+  },
+  methods: {
+    toggleFavoriteStatus(friendId) {
+      const iF = this.friends.find(friend => friend.id === friendId);
+      iF.isFavorite = !iF.isFavorite;
+    },
   }
 }
 
@@ -49,6 +66,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -112,5 +130,4 @@ header {
   border-color: #ec3169;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
 }
-
 </style>
