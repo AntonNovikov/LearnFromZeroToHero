@@ -26,3 +26,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 
+Maybe TODO: Из указанного количества шариков  (20230912)
+Maybe TODO: Из указанного набора цветов  (20230912)
