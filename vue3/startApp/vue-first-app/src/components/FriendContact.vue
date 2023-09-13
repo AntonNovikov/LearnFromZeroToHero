@@ -9,6 +9,7 @@
             <li>Phone: {{ phoneNumber }}</li>
             <li>Email: {{ emailAddress }}</li>
         </ul>
+        <button @click="$emit('delete', id)">Delete from constact</button>
     </li>
 </template>
 
@@ -35,7 +36,7 @@ export default {
             // }
         }
     },
-    emits: ['toggle-favorite'],
+    emits: ['toggle-favorite', 'delete'],
     // emits: {
     //     'toggle-favorite': function (id) {
     //         if (id) {
@@ -74,7 +75,10 @@ export default {
             //     } else {
             //         this.friendIsFavorite = '1';
             //     }
-        }
+        },
+        // deleteFriend(){
+        //     this.$emit('delete');
+        // }
     },
 }
 
