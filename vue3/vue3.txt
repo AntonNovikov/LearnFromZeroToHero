@@ -4,6 +4,11 @@ v-on: === @
 v-bind:   ===  :
 v-slot: === #
 
+v-model: = v-on: + v-bind:
+
+
+v-model: = :model-value + @update:model-value (custom component)
+
 v-if
 v-else
 

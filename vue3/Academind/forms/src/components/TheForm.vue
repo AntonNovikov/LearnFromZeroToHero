@@ -95,6 +95,10 @@ export default {
       this.how = null
       console.log(this.confirm)
       this.confirm = false;
+
+      console.log("rating")
+      console.log(this.rating)
+      this.rating = null;
     },
     validateInput(){
 if(this.userName=== ''){
