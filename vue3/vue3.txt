@@ -19,3 +19,5 @@ v-for
 
 
 !use v-for and v-if . use a wrapper with v-if instead
+
+https://vuejs.org/style-guide/
