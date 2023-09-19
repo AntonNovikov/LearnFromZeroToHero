@@ -26,3 +26,10 @@ v-for
 !use v-for and v-if . use a wrapper with v-if instead
 
 https://vuejs.org/style-guide/
+
+
+npm i --save vue-router@next
+
+ this.$route.path
+ this.$route.params
+this.$route.query
