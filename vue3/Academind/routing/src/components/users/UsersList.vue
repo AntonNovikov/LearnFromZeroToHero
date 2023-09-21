@@ -14,15 +14,15 @@ export default {
     UserItem,
   },
   inject: ['users'],
-  data(){
-    return {changesSaved:false}
+  data() {
+    return { changesSaved: false }
   },
   methods: {
     confirmInput() {
       this.$router.push('/teams');
       // this.$router.forward();
     },
-    saveChanges(){
+    saveChanges() {
       this.changesSaved = true;
     }
   },
@@ -31,7 +31,18 @@ export default {
     console.log(to, from, next)
     next()
   },
-  unmounted(){
+  beforeRouteLeave(to, from, next) {
+    console.log('usersList Cmp beforeRouteLeave')
+    console.log(to, from, next)
+    if (this.changesSaved) {
+      next();
+
+    } else{
+    const userWantsToLeave =  confirm('Are you sure? You got unsaved changes!')
+    next(userWantsToLeave)
+    }
+  },
+  unmounted() {
     console.log("unmounted")
   }
 };
