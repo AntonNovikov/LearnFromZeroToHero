@@ -16,6 +16,7 @@ const router = createRouter({
     // { path: '/teams' , component: TeamsList , alias: '/' }, // our-domain.com/teams => TeamsList
     { name: 'teams',
       path: '/teams',
+      meta: {needsAuth: true},
     //   component: TeamsList,
       components: {default:  TeamsList, footer: TeamsFooter},
       children: [
@@ -24,8 +25,10 @@ const router = createRouter({
 }, // our-domain.com/teams => TeamsList
 // { path: '/teams/:teamId', component: TeamMembers, props: true },
     // { path: '/users', component: UsersList }, // our-domain.com/users => ...
-    { path: '/users', components:{ default: UsersList, footer: UsersFooter },beforeEnter(){
-
+    { path: '/users', components:{ default: UsersList, footer: UsersFooter },beforeEnter(to, from, next){
+console.log('users beforeEnter');
+console.log(to,from);
+next();
     } }, //
 
     // { path: '/teams/new' , component: UsersList } //
@@ -45,6 +48,12 @@ return { left: 0, top: 0,};
 router.beforeEach(function(to, from, next){
 console.log('global beforeEach')
   console.log(to,from);
+  if(to.meta.needsAuth){
+    console.log("Needs auth")
+    next();
+  } else {
+    next()
+  }
   // next(false);
   // if(to.name === 'team-members'){
   //   next();
