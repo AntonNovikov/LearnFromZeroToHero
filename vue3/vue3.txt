@@ -33,3 +33,6 @@ npm i --save vue-router@next
  this.$route.path
  this.$route.params
 this.$route.query
+
+
+npm install --save vuex@next
