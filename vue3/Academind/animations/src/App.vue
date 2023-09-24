@@ -1,12 +1,27 @@
 <template>
   <div class="container">
-    <div class="block"></div>
-    <button>Animate</button>
+    <div class="block" :class="{ animate: animatedBlock }"></div>
+    <button @click="animateBlock">Animate</button>
   </div>
-  <base-modal @close="hideDialog" v-if="dialogIsVisible">
+  <div class="container">
+    <transition name="para" @before-enter="beforeEnter">
+      <p v-if="paraIsVisible">This is only sometimes visible...</p>
+    </transition>
+    <button @click="toggleParagraph">Toggle Par</button>
+  </div>
+  <div class="container">
+    <transition name="fade-button" mode="out-in">
+      <button @click="showUsers" v-if="!usersAreVisible">Show Users</button>
+      <button @click="hideUsers" v-else>Hide Users</button>
+    </transition>
+
+  </div>
+  <!-- <base-modal @close="hideDialog" v-if="dialogIsVisible"> -->
+  <base-modal @close="hideDialog" :open="dialogIsVisible">
     <p>This is a test dialog!</p>
     <button @click="hideDialog">Close it!</button>
   </base-modal>
+
   <div class="container">
     <button @click="showDialog">Show Dialog</button>
   </div>
@@ -15,9 +30,30 @@
 <script>
 export default {
   data() {
-    return { dialogIsVisible: false };
+    return {
+      animatedBlock: false,
+      dialogIsVisible: false,
+      paraIsVisible: false,
+      usersAreVisible: false,
+    };
   },
   methods: {
+
+    beforeEnter(){
+      console.log("beforeEnter")
+    },
+    showUsers() {
+      this.usersAreVisible = true
+    },
+    hideUsers() {
+      this.usersAreVisible = false
+    },
+    animateBlock() {
+
+      // this.animatedBlock = this.animatedBlock ? false : true
+      this.animatedBlock = !this.animatedBlock
+    },
+    toggleParagraph() { this.paraIsVisible = !this.paraIsVisible },
     showDialog() {
       this.dialogIsVisible = true;
     },
@@ -32,12 +68,15 @@ export default {
 * {
   box-sizing: border-box;
 }
+
 html {
   font-family: sans-serif;
 }
+
 body {
   margin: 0;
 }
+
 button {
   font: inherit;
   padding: 0.5rem 2rem;
@@ -47,17 +86,22 @@ button {
   color: white;
   cursor: pointer;
 }
+
 button:hover,
 button:active {
   background-color: #a80b48;
   border-color: #a80b48;
 }
+
 .block {
   width: 8rem;
   height: 8rem;
   background-color: #290033;
   margin-bottom: 2rem;
+  /* transition: all 2s ease-in; */
+
 }
+
 .container {
   max-width: 40rem;
   margin: 2rem auto;
@@ -69,4 +113,85 @@ button:active {
   border: 2px solid #ccc;
   border-radius: 12px;
 }
+
+.animate {
+  /* transform: translateX(-50px) */
+  animation: slide-fade .4s ease-out forwards;
+}
+
+/* @keyframes identifier {
+
+} */
+
+.para-enter-from {
+  /* opacity:0;
+  transform: translateY(-30px); */
+}
+
+.para-enter-active {
+  /* transition: all .5s ease-out */
+  animation: slide-scale 0.3s ease-out forwards;
+}
+
+.para-enter-to {
+  /* opacity:1;
+  transform: translateY(0); */
+}
+
+.para-leave-from {
+  /* opacity:1;
+  transform: translateY(0px); */
+}
+
+.para-leave-active {
+  /* transition: all .5s ease-in */
+  animation: slide-scale 0.3s ease-out forwards;
+}
+
+.para-leave-to {
+  /* opacity:0;
+  transform: translateY(-30px); */
+}
+
+.fade-button-enter-from {
+  opacity: 0;
+}
+
+.fade-button-enter-active {
+  transition: opacity .5s ease-out;
+}
+
+.fade-button-enter-to {
+  opacity: 1;
+}
+
+
+
+@keyframes slide-scale {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+
+  70% {
+    transform: translateX(-120px) scale(1.1);
+  }
+
+  100% {
+    transform: translateX(-150px) scale(1);
+  }
+}
+
+/* @keyframes slide-fade {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+
+  70% {
+    transform: translateX(-120px) scale(1.1);
+  }
+
+  100% {
+    transform: translateX(-150px) scale(1);
+  }
+} */
 </style>
