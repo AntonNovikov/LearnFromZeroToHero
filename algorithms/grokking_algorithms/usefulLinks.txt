@@ -1,0 +1,6 @@
+www.manning.com/books/grokking-algorithms
+https://github.com/egonschiele/grokking_algorithms. (Phyton 2.7)
+https://github.com/WilliamKulha/grokking-algorithms-javascript
+https://github.com/egonSchiele/grokking_algorithms (all PL)
+
+adit.io
