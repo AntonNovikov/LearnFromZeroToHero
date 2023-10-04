@@ -36,3 +36,13 @@ this.$route.query
 
 
 npm install --save vuex@next
+## Deploy
+package.json
+``` json
+"scripts": {
+"build": "vue-cli-service build"
+}
+```
+npm i -g firebase-tools
+firebase login
+firebase init
