@@ -43,3 +43,6 @@ package.json
 "build": "vue-cli-service build"
 }
 ```
+npm i -g firebase-tools
+firebase login
+firebase init
